@@ -31,10 +31,10 @@ int backwardStep3[8] = {10,150,0,170 ,120,55,50,80};
 int backwardStep2[8] = {10,170,0,170 ,80,55,50,80};
 int backwardStep1[8] = {10,170,20,170 ,80,85,120,80};
 
-int turnrightStep1[8] = {10,170,0,170,55,80,55,55};
-int turnrightStep2[8] = {20,170,0,170 ,85,80,55,120};
-int turnrightStep3[8] = {10,150,0,170 ,85,80,120,120};
-int turnrightStep4[8] = {10,170,0,170 ,85,80,120,55};
+int turnrightStep1[8] = {10,170,0,170 ,120,120,85,130};
+int turnrightStep2[8] = {10,160,0,150 ,120,55,85,80};
+int turnrightStep3[8] = {10,160,0,170 ,55,55,85,80};
+int turnrightStep4[8] = {10,170,0,170 ,55,120,85,80};
 
 int turnleftStep1[8] = {10,170,0,170 ,55,55,85,55};
 int  turnleftStep2[8] = {10,160,0,150 ,55,120,85,80};
