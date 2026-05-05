@@ -136,7 +136,7 @@ switch(state){
       case 4:
     Serial.println("Enter CASE 4");
     if(moveToTarget(forwardStep5)){
-      state = 5;
+      state = 0;
     walk = 0;
     left = 0;
     right = 0;
