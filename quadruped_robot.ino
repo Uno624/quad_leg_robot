@@ -20,9 +20,8 @@ int standupS[8] = {10,170,0,170,85,85,85,80};
 int forwardStep1[8] = {20,170,0,170 ,50,85,85,80};
 int forwardStep2[8] = {10,170,10,170 ,50,120,120,80};
 int forwardStep3[8] = {10,170,0,150 ,85,120,120,120};
-int forwardStep4[8] = {10,150,0,170 ,85,50,60,120};
-int forwardStep5[8] = {10,170,0,170 ,85,50,60,80};
-int forwardStep6[8] = {10,170,0,170 ,85,120,60,80};
+int forwardStep4[8] = {10,150,0,170 ,85,60,60,120};
+int forwardStep5[8] = {10,170,0,170 ,85,120,60,80};
 
 int backwardStep6[8] = {20,170,10,170 ,80,55,85,80};
 int backwardStep5[8] = {20,170,10,150 ,80,120,120,130};
@@ -40,6 +39,7 @@ int turnleftStep1[8] = {20,170,10,170 ,85,85,85,80};
 int turnleftStep2[8] = {10,170,0,170 ,85,50,85,50};
 int turnleftStep3[8] = {10,170,0,170 ,30,50,30,50};
 int turnleftStep4[8] = {10,160,0,160 ,30,85,30,80};
+
 
 
 bool done = true;
@@ -137,12 +137,11 @@ switch(state){
     Serial.println("Enter CASE 4");
     if(moveToTarget(forwardStep5)){
       state = 5;
-    }
-    break;  
-      case 5:
-    Serial.println("Enter CASE 5");
-    if(moveToTarget(forwardStep6)){
-      state = 1;
+    walk = 0;
+    left = 0;
+    right = 0;
+    backward = 0;
+    standupbro = 0;
     }
     break;
   }
@@ -213,6 +212,11 @@ switch(stateturnleft){
     Serial.println("Enter CASE 3");
     if(moveToTarget(turnleftStep4)){
       stateturnleft = 0;
+    walk = 0;
+    left = 0;
+    right = 0;
+    backward = 0;
+    standupbro = 0;
     }
     break;
   }
@@ -242,6 +246,11 @@ switch(stateturnright){
     Serial.println("Enter CASE 3");
     if(moveToTarget(turnrightStep4)){
       stateturnright = 0;
+    walk = 0;
+    left = 0;
+    right = 0;
+    backward = 0;
+    standupbro = 0;
     }
     break;
   }
@@ -317,7 +326,7 @@ bool moveToTarget(int target[]){
       servos[i].write(current[i]);
     }
 
-    delay(10); // ความลื่น
+    delay(2);
   }
 
   return true;
